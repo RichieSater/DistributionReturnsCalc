@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Distribution Of Stock Returns Calculator</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Stock Returns</h1>
+  <form method="POST" action="{{ url_for('results') }}">
+    <label for="ticker">Ticker:</label><br>
+    <input type="text" name="ticker" required><br>
+    <br>
+    <label for="period">Period:</label><br>
+    <select name="period" required>
+      <option value="1y">1 year</option>
+      <option value="5y">5 years</option>
+      <option value="10y">10 years</option>
+      <option value="20y">20 years</option>
+      <option value="50y">50 years</option>
+    </select>
+    <br>
+    <br>
+    <label for="interval">Interval:</label><br>
+    <select name="interval" required>
+      <option value="1d">1 day</option>
+      <option value="1wk">1 week</option>
+      <option value="20d">20 days</option>
+      <option value="1mo">1 month</option>
+      <option value="2mo">2 months</option>
+      <option value="1q">1 quarter</option>
+    </select>
+    <br>
+    <br>
+    <label for="return_type">Return type:</label><br>
+    <select name="return_type" required>
+      <option value="close_to_close">Close to close</option>
+      <option value="open_to_close">Open to close</option>
+      <option value="high_to_low">High to low</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

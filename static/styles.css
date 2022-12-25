@@ -1,0 +1,56 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form select,
+form input[type="text"] {
+  width: 50%;
+  height: 30px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+form input[type="submit"] {
+  width: 50%;
+  height: 40px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.results h1 {
+  margin-bottom: 30px;
+}
+
+.results table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.results td,
+.results th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.results tr:nth-child(even) {
+  background-color: #dddddd;
+}

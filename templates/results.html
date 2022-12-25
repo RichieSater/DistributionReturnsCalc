@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Returns</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Stock Returns</h1>
+  <h2>{{ ticker }}</h2>
+  <img src="{{ histogram_url }}" alt="histogram">
+  <table>
+    <tr>
+      <th>Statistic</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>Mean</td>
+      <td>{{ mean | round(4) }}%</td>
+    </tr>
+    <tr>
+      <td>Kurtosis</td>
+      <td>{{ kurtosis | round(4) }}</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Data</th>
+      <th>Count</th>
+      <th>Average</th>
+      <th>Frequency %</th>
+      <th>Frequency Adjusted Returns</th>
+    </tr>
+    <tr>
+      <td>Positive</td>
+      <td>{{ positive_count }}</td>
+      <td>{{ positive_mean | round(4) }}%</td>
+      <td>{{ positive_frequency | round(4) }}%</td>
+      <td>{{ positive_adjusted_returns | round(4) }}%</td>
+    </tr>
+    <tr>
+      <td>Negative</td>
+      <td>{{ negative_count }}</td>
+      <td>{{ negative_mean | round(4) }}%</td>
+      <td>{{ negative_frequency | round(4) }}%</td>
+      <td>{{ negative_adjusted_returns | round(4) }}%</td>
+      </tr>
+    </table>
+  </body>
+</html>
